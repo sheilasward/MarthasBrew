@@ -15,16 +15,15 @@
                     </ol>
                     <div class="carousel-inner blog-img-wide">
                         <div class="item text-center active">
+                            <img src="<?php echo base_url(); ?>/assets/images/Caramel-Macchiato.jpg" alt="" />
+                        </div>
 
+                        <div class="item text-center">
                             <img src="<?php echo base_url(); ?>/assets/images/coffeeshop.png" alt="" />
                         </div>
-                        <div class="item text-center">
 
-                        <img src="<?php echo base_url(); ?>/assets/images/coffeeshop.png" alt="" />
-                        </div>
                         <div class="item text-center">
-
-                        <img src="<?php echo base_url(); ?>/assets/images/coffeeshop.png" alt="" />
+                            <img src="<?php echo base_url(); ?>/assets/images/coffeeshop.png" alt="" />
                         </div>
                     </div>
                 </div>
