@@ -14,4 +14,8 @@
             
         }
 
+        public function add_items($data) {
+            $this->db->insert("items", $data);
+        }
+
     }

@@ -20,77 +20,106 @@
 </head>
 <body>
     <div class="container">
-        <h2>Register</h2>
+        <h2>New Menu Item</h2>
+        <hr />
         <div class="row">
             <div class="col-md-8">
-                <section id="loginForm">
-                    <form method="post" action="<?php echo site_url('admin/register/verify')?>">
-                        <h4>Create a new account</h4>
-                        <br />
+                <section id="addNewItemForm">
+                    <form method="post" action="<?php echo site_url('items/add/verify')?>">
                         <dl class="dl-horizontal">
                             <div class="form-group">
                                 <dt>
-                                    First Name: 
+                                    Name of Item: 
                                 </dt>
 
                                 <dd>
-                                    <input class="form-control" type="text" required name="firstname"> 
-                                    
+                                    <input class="form-control" type="text" required name="title">
                                 </dd>
                             </div>
 
                             <div class="form-group">
                                 <dt>
-                                    Last Name: 
+                                    Description: 
                                 </dt>
 
                                 <dd>
-                                    <input class="form-control" type="text" required name="lastname">
-                                    
+                                    <input class="form-control" type="text" required name="description">
                                 </dd>
                             </div>
 
                             <div class="form-group">
                                 <dt>
-                                    Email: 
+                                    Ingredients: 
                                 </dt>
 
                                 <dd>
-                                    <input class="form-control" type="email" required name="email">
-                                    
+                                    <input class="form-control" type="text" required name="ingredients">
                                 </dd>
                             </div>
 
                             <div class="form-group">
                                 <dt>
-                                    Password: 
+                                    Price (small): 
                                 </dt>
 
                                 <dd>
-                                    <input class="form-control" type="password" required name="password">
-                                    
+                                    <input class="form-control" type="text" required name="price-small">
                                 </dd>
                             </div>
 
                             <div class="form-group">
                                 <dt>
-                                    Confirm Password: 
+                                    Price (medium): 
                                 </dt>
 
                                 <dd>
-                                    <input class="form-control" type="password" required name="cpassword">
-                                    
+                                    <input class="form-control" type="text" required name="price-medium">
                                 </dd>
                             </div>
 
-                        </div>
-                        <div class="form-group col-md-9">
-                            <input class="btn btn-share" type="submit" name="submit" value="Register"
+                            <div class="form-group">
+                                <dt>
+                                    Price (large): 
+                                </dt>
+
+                                <dd>
+                                    <input class="form-control" type="text" required name="price-large">
+                                </dd>
+                            </div>
+
+                            <div class="form-group">
+                                <dt>
+                                    Item Type: 
+                                </dt>
+
+                                <dd>
+                                <select class="form-control" type="text" required name="type">
+                                    <option value="hot">Hot</option>
+                                    <option value="cold">Cold</option>
+                                </select>
+                                </dd>
+                            </div>
+
+                            <div class="form-group">
+                                <dt>
+                                    Picture: 
+                                </dt>
+
+                                <dd>
+                                    <input type="file" name="ItemPicture" />
+                                </dd>
+                            </div>
+                        </dl>
+                        
+                                              
+                        
+                        
+                        <div class="form-group col-md-10">
+                            <input class="btn btn-share" type="submit" name="submit" value="Add Item"
                                    style="background:#fa6862;margin-top:10px;padding:10px 10px 6px;
                                           color:#fff;text-transform:uppercase;"> 
                         </div>
                     </form>
-                    <a href="<?php echo base_url(); ?>index.php" class="col-md-9">Back to Home Page</a>
                 </section>
                 
             </div>

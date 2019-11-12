@@ -116,14 +116,14 @@
         border-radius: 0;
     }
     .navbar-toggle {
-        background: #353535;
-        color: #fff;
+        background: white;
+        color: black;
         margin-top: 30px;
     }
 
     .sticky-nav .navbar-toggle {
-        background: #353535;
-        color: #fff;
+        background: white;
+        color: black;
         margin-top: 6px;
         margin-right: -6px;
     }
@@ -250,8 +250,8 @@
         border-radius: 0;
     }
     .navbar-toggle {
-        background: #353535;
-        color: #fff;
+        background: white;
+        color: black;
         margin-top: 30px;
     }
     .home-text h1 {

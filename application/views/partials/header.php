@@ -23,7 +23,19 @@
             font-size: 36px;
             line-height: 35px;
             font-weight:500;
-            margin: 5px 30px;
+            margin: 5px 30px 5px 0px;
+        }
+
+        .tags ul li {
+            border: 1px solid gray;
+        }
+
+        .hideIt {
+            display: none;
+        }
+
+        .navigation.sticky-nav ul.nav>li>a {
+            height: 60px;
         }
     </style>
 </head>
@@ -34,17 +46,18 @@
                 <div class="col-md-12">
                     <div class="navbar navbar-static-top">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="fa fa-bars"></span>
+                        
+                            <button type="button" class="navbar-toggle" style="background:white; color:black;" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="blue-text"><i class="fa fa-bars"></i></span>
                             </button>
-                            <h3 class="navbar-brand" style="font-family: 'Rochester', cursive;">Martha's <br />Brew Shop</h3>
+                            <h3 class="navbar-brand" style="font-family: 'Rochester', cursive;">Martha's Brew Shop</h3>
                         </div>
                         <?php $msg = ""; ?>
                         <div class="navbar-collapse collapse ddsmoothmenu">
                             <ul class="nav navbar-nav top-nav sf-menu">
                                 <li><a href="<?php echo base_url(); ?>index.php">Home</a></li>
                                 <li><a href="<?php echo base_url(); ?>index.php/about">About</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/items">Menu</a></li>
+                                <li><a href="<?php echo base_url(); ?>index.php/items">Order</a></li>
                                 
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
@@ -57,4 +70,4 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    

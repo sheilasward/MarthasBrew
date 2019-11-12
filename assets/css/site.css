@@ -4,7 +4,7 @@
     font-size: 36px;
     line-height: 35px;
     font-weight:500;
-    margin: 5px 30px;
+    margin: 5px 30px 5px 0;
 }
 .navigation {
     margin-bottom: 50px;
@@ -20,4 +20,13 @@
 
 .blog .blog-img-wide img {
     padding-bottom: 0;
+}
+
+.hideIt {
+    visibility: hidden;
+}
+
+.navigation.sticky-nav ul.nav>li>a {
+    height: 60px;
+    
 }

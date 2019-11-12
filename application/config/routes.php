@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 $route['login'] = 'admin/login/index';
 $route['register'] = 'admin/register/index';
 $route['items'] = 'items/index';
