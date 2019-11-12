@@ -27,10 +27,13 @@
                 <?php $itemId = $item['id']; ?>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="<?php echo base_url(); ?>/assets/images/SaltedCaramelMocha.jpg" alt="">
+                        <?php if ($item['image-url'] == NULL) {
+                            $item['image-url'] = 'coffeePic.jpg';
+                        } ?>
+                        <img src="<?php echo site_url(); ?>/assets/images/<?php echo $item['image-url']; ?>">
                         <div class="caption text-center">
                             <h3><?php echo $item['title']; ?></h3>
-                            <h4><a href="<?php echo base_url(); ?>index.php/items/details?Id=<?php $itemId ?>">More Info</a></h4>
+                            <h4><a href="<?php echo site_url('index.php/items/'.$item['id']); ?>">More Info</a></h4>
                             <a href="" class="btn btn-share" style="width: 150px;" role="button">Add To Cart</a>
                             <a href="" class="btn btn-share" style="width: 150px;" role="button">Customize Order</a>
                          </div>
@@ -46,7 +49,10 @@
                 <?php $itemId = $item['id']; ?>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="<?php echo base_url(); ?>/assets/images/IcedPeppermintWhiteChocolateMocha.jpg" alt="">
+                    <?php if ($item['image-url'] == NULL) {
+                        $item['image-url'] = 'coffeePic.jpg';
+                    } ?>
+                    <img src="<?php echo site_url(); ?>/assets/images/<?php echo $item['image-url']; ?>">
                         <div class="caption text-center">
                             <h3><?php echo $item['title']; ?></h3>
                             <h4><a href="<?php echo base_url(); ?>index.php/items/details?Id=<?php $itemId ?>">More Info</a></h4>
