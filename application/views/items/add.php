@@ -44,7 +44,7 @@
                             <input type="file" name="userfile" size="20" />
                         </div>
              
-                        <div class="form-group col-md-10">
+                        <div class="form-group">
                             <input class="btn btn-share" type="submit" name="submit" value="Add Item"
                                    style="background:#fa6862;margin-top:10px;padding:10px 10px 6px;
                                           color:#fff;text-transform:uppercase;"> 

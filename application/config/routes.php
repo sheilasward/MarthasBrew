@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$route['login'] = 'admin/login/index';
-$route['register'] = 'admin/register/index';
+$route['login'] = 'users/login/index';
+$route['register'] = 'users/register/index';
+$route['logout'] = 'users/logout';
 $route['items/add'] = 'items/add';
 $route['items/(:any)'] = 'items/details/$1';
 $route['items'] = 'items/index';

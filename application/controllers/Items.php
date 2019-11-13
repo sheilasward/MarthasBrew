@@ -61,6 +61,9 @@
                 }
 
                 $this->item_model->add_item($image_url);
+
+                // Set message
+                $this->session->set_flashdata('item_added', 'The item was added to the database');
                 redirect('index.php/items');
             }
         }

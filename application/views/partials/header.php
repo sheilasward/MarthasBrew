@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     <title>Martha's Brew</title>
-    <link href="<?php echo base_url(); ?>/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/assets/css/animate.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/assets/css/prettify.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/assets/css/font-awesome.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/assets/css/superfish.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/assets/css/style.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/assets/css/style-responsive.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/assets/css/apps-reset.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/assets/css/default-theme.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/assets/css/blog.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/assets/css/PagedList.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/prettify.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/superfish.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/style-responsive.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/apps-reset.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/default-theme.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/blog.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/PagedList.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Rochester&display=swap" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/assets/css/site.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/site.css" rel="stylesheet" />
     <style>
         .navbar-brand {
             color: #fa6862;
@@ -61,10 +61,40 @@
                                 
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="<?php echo base_url(); ?>index.php/login">Login</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/register">Register</a></li>
+                                <?php if(!$this->session->userdata('logged_in')) : ?>
+                                    <li><a href="<?php echo base_url(); ?>index.php/login">Login</a></li>
+                                    <li><a href="<?php echo base_url(); ?>index.php/register">Register</a></li>
+                                <?php endif; ?>
+                                <?php if($this->session->userdata('logged_in')) : ?>
+                                    <li><a href="<?php echo base_url(); ?>index.php/logout">Logout</a></li>
+                                <?php endif; ?>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Flash messages -->
+                        <?php if($this->session->flashdata('user_registered')): ?>
+                            <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_registered').'</p>'; ?>
+                        <?php endif; ?>
+                        <?php if($this->session->flashdata('item_added')): ?>
+                            <?php echo '<p class="alert alert-success">'.$this->session->flashdata('item_added').'</p>'; ?>
+                        <?php endif; ?>
+                        <?php if($this->session->flashdata('login_failed')): ?>
+                            <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('login_failed').'</p>'; ?>
+                        <?php endif; ?> 
+                        <?php if($this->session->flashdata('user_logged_in')): ?>
+                            <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_logged_in').'</p>'; ?>
+                        <?php endif; ?> 
+                        <?php if($this->session->flashdata('user_logged_out')): ?>
+                            <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_logged_out').'</p>'; ?>
+                        <?php endif; ?>  
                     </div>
                 </div>
             </div>

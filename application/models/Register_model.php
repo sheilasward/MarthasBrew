@@ -9,3 +9,4 @@
             return $this->db->get_where('users', $arr)->row();
         }
     }
+?>
