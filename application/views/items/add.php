@@ -14,11 +14,17 @@
                         </div>
                         <div class="form-group">
                             <label>Description</label>
-                            <input class="form-control" type="text" name="description" placeholder="Description of Item">
+                            <textarea id="editor1" class="form-control" type="text" name="description" placeholder="Description of Item"></textarea>
+                            <script>
+                                CKEDITOR.replace( 'editor1' );
+                            </script>
                         </div>
                         <div class="form-group">
                             <label>Ingredients</label>
-                            <input class="form-control" type="text" name="ingredients" placeholder="Ingredients">
+                            <textarea id="editor2" class="form-control" type="text" name="ingredients" placeholder="Ingredients"></textarea>
+                            <script>
+                                CKEDITOR.replace( 'editor2' );
+                            </script>
                         </div>
                         <div class="form-group">
                             <label>Price (small)</label>

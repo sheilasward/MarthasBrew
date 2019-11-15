@@ -56,6 +56,8 @@
                         'logged_in' => true
                     );
 
+                    $this->session->set_userdata($user_data);
+
                     // Set success message
                     $this->session->set_flashdata('user_logged_in', 'You are now logged in!');
                     redirect('index.php');

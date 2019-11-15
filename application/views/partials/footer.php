@@ -1,4 +1,4 @@
-    </body>
+        
 
     <!-- jQuery v1.10.2  -->
     <script src="<?php echo base_url(); ?>assets/js/jquery.js"></script>
@@ -54,18 +54,25 @@
     <!-- Include required JS files -->
     <script src="<?php echo base_url(); ?>assets/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
     <script src="<?php echo base_url(); ?>assets/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+
+    <script>
+        $('.filter').click(function () {
+            if ($(this).text() == "HOT COFFEES") {
+                $("#hotCoffees").removeClass("hideIt");
+                $("#coldCoffees").addClass("hideIt");
+            }
+            else {
+                $("#coldCoffees").removeClass("hideIt");
+                $("#hotCoffees").addClass("hideIt");
+            }
+        });
+
+        $('.customize').click(function () {
+            $(this).closest('textarea').removeClass("hideIt");
+        });
+    </script>
+
     
 
-<script>
-    $('.filter').click(function () {
-        if ($(this).text() == "HOT COFFEES") {
-            $("#hotCoffees").removeClass("hideIt");
-            $("#coldCoffees").addClass("hideIt");
-        }
-        else {
-            $("#coldCoffees").removeClass("hideIt");
-            $("#hotCoffees").addClass("hideIt");
-        }
-    });
-</script>
+</body>
 </html>

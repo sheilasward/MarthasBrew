@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Martha's Brew</title>
+    <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet" />
     <link href="<?php echo base_url(); ?>assets/css/prettify.css" rel="stylesheet" />
@@ -16,6 +17,7 @@
     <link href="<?php echo base_url(); ?>assets/css/PagedList.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Rochester&display=swap" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/site.css" rel="stylesheet" />
+    
     <style>
         .navbar-brand {
             color: #fa6862;
@@ -85,6 +87,9 @@
                         <?php endif; ?>
                         <?php if($this->session->flashdata('item_added')): ?>
                             <?php echo '<p class="alert alert-success">'.$this->session->flashdata('item_added').'</p>'; ?>
+                        <?php endif; ?>
+                        <?php if($this->session->flashdata('item_updated')): ?>
+                            <?php echo '<p class="alert alert-success">'.$this->session->flashdata('item_updated').'</p>'; ?>
                         <?php endif; ?>
                         <?php if($this->session->flashdata('login_failed')): ?>
                             <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('login_failed').'</p>'; ?>
